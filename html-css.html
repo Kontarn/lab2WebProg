@@ -34,11 +34,11 @@
     }
     function swapZIndex(pic1, pic2) {
       var zIndex1 = parseInt(pic1.style.zIndex); // Получаем значение z-index первой картинки и преобразуем его в число
-      var zIndex2 = parseInt(pic2.style.zIndex); // Получаем значение z-index второй картинки и преобразуем его в число
+     var zIndex2 = parseInt(pic2.style.zIndex); // Получаем значение z-index второй картинки и преобразуем его в число
 
       pic1.style.zIndex = zIndex2; // Присваиваем первой картинке значение z-index второй картинки
-      pic2.style.zIndex = zIndex1; // Присваиваем второй картинке значение z-index первой картинки
-    }
+    pic2.style.zIndex = zIndex1; // Присваиваем второй картинке значение z-index первой картинки
+}
   </script>
   
 </head>
@@ -46,13 +46,12 @@
 
 &nbsp;<div class="text">
 
-      <h1>Отступ текста</h1>
-        <p>Отступ в первой строке абзаца, имитирующий красную строку, - это один из самых распространенных эффектов для текста. В CSS для указания отступа предназначено свойство text-indent.</p>
+      <h1>Тема 4. Мультипрограммирование (многозадачность).</h1>
+        <p>Важнейшей функцией операционной системой является организация рационального использования всех ее аппаратных и информационных ресурсов. К основным ресурсам могут быть отнесены процессоры, память, внешние устройства, данные и программы. Располагающая одними и теми же аппаратными ресурсами, но управляемая различными ОС, вычислительная система может работать с разной степенью эффективности.</p>
   
-        
-          <p class="news" onmouseover="this.className='task91'" onmouseout="this.className='news'">06.08.1991 - Первый в мире сайт</p>
-          <p class="news" onmouseover="editText" onmouseout="this.className='news'">Больша́я па́нда, или бамбу́ковый медве́дь (лат. Ailuropoda melanoleuca) — вид всеядных млекопитающих из семейства медвежьих (Ursidae) со своеобразной чёрно-белой окраской шерсти, обладающих некоторыми признаками енотов.</p>
-
+        </details>&nbsp;<h2>Мультипрограммирование призвано повысить эффективность использования вычислительной системы, однако эффективность может пониматься по-разному. Наиболее характерными критериями эффективности вычислительных систем являются –</h2>
+          <p class="news" onmouseover="this.className='task91'" onmouseout="this.className='news'">пропускная способность – количество задач, выполняемых вычислительной системой в единицу времени.</p>
+          <p class="news" onmouseover="editText" onmouseout="this.className='news'">Удобство работы пользователей, заключающееся в частности в том, что они имеют возможность интерактивно работать одновременно с несколькими приложениями на одной машине.</p>
 </div>
 
 <!-- 
@@ -76,25 +75,25 @@
     <input type="button" value="Screen" onclick="printScreenData();" name="b3">
   </form>
 </div>
-<div style="position: absolute; top: 35%;left: 5%;z-index:0;">
+<div style="position: absolute; top: 40%;left: 5%;z-index:0;">
   <img src="Pand.png" name="pic1" >
 </div>
 
-<div style="position: absolute; top: 35%;left: 15%;z-index:1;">
+<div style="position: absolute; top: 40%;left: 15%;z-index:1;">
   <img src="Pand.png" name="pic2" >
 </div>
-<div style="position: absolute; top: 35%;left: 25%;z-index:0;">
+<div style="position: absolute; top: 40%;left: 25%;z-index:0;">
   <img src="Pand.png" name="pic3" >
 </div>
 
   
-  <form style="position: absolute; top: 60%;left: 5%;" name="fb1">
+  <form style="position: absolute; top: 65%;left: 5%;" name="fb1">
     <input type="button"  value="HideCentrePic" onclick="hidePic13()" name="butt1">
   </form>
-  <form  style="position: absolute; top: 60%;left: 15%" name="fb2">
+  <form  style="position: absolute; top: 65%;left: 15%" name="fb2">
     <input type="button"  value="ShowCentrePic" onclick="showPic13()" name="butt2">
   </form>
-  <form  style="position: absolute; top: 60%;left: 25%;" onclick="swapZIndex(pic1, pic2)" name="fb3">
+  <form  style="position: absolute; top: 65%;left: 25%;" onclick="smenaZIndex()" name="fb3">
     <input type="button"  value="WhatIsIt?" name="butt3">
   </form>
 

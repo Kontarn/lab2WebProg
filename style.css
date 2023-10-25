@@ -152,11 +152,7 @@ p.task91{
   /* display: flex; */
   justify-content: center;
 }
-.button {
 
-  flex-direction: row;
-
-}
 
 table {
   border-collapse: collapse;
