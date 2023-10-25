@@ -7,23 +7,113 @@
   <title>История веба - WWW</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+  <script type="text/javascript">
+    document.write("Дата последнего изменения документа: "+document.lastModified);
+
+    function printDataBrowserWrite(){
+      document.write("Кодовое имя браузера: "+navigator.appCodeName+"<br>Официальное имя браузера: "+navigator.appName+
+      "<br>Версия браузера: "+navigator.appVersion+"<br>Платформа: "+navigator.platform)
+    }
+    function printUsernameAddressDoc(){
+      window.alert("Имя пользователя: Nikita"+"\nАдрес документа: "+location.href)
+    }
+    function printScreenData(){
+      if(window.confirm("Ширина экрана: "+screen.width+"\nВысота экрана: "+screen.height+"\nГлубина цвета: "+screen.colorDepth))
+        document.write("Ширина экрана: "+screen.width+"<br>Высота экрана: "+screen.height+"<br>Глубина цвета: "+screen.colorDepth);
+    }
+
+    function hidePic13(){
+
+        pic1.style.visibility='hidden'
+        pic3.style.visibility='hidden'
+    }
+    function showPic13(){
+      pic1.style.visibility='visible'
+      pic3.style.visibility='visible'
+    }
+    function swapZIndex(pic1, pic2) {
+      var zIndex1 = parseInt(pic1.style.zIndex); // Получаем значение z-index первой картинки и преобразуем его в число
+      var zIndex2 = parseInt(pic2.style.zIndex); // Получаем значение z-index второй картинки и преобразуем его в число
+
+      pic1.style.zIndex = zIndex2; // Присваиваем первой картинке значение z-index второй картинки
+      pic2.style.zIndex = zIndex1; // Присваиваем второй картинке значение z-index первой картинки
+    }
+  </script>
+  
 </head>
 <body>
+
 &nbsp;<div class="text">
-    <main>
-      <h1>Создание WWW</h1>
-        <p>WWW (Всемирная паутина) является самой популярной службой Интернета, но ее нельзя отождествлять со Всемирной паутиной. Идея ее создания была реализована за четыре года (1989-1992гг.) программистом Тимоти Джон Бернерс-Ли и его коллегами. Хотя, как это часто бывает, сделано это было вовсе не на пустом месте. Например, понятие "гипертекст" первым придумал американский ученый Тед Нельсон еще в 1965 году. Датой же рождения Интернета счиается 29 октября 1969 года, а писатели фантасты задолго предсказывали появление нечто подобного.</p>
+
+      <h1>Отступ текста</h1>
+        <p>Отступ в первой строке абзаца, имитирующий красную строку, - это один из самых распространенных эффектов для текста. В CSS для указания отступа предназначено свойство text-indent.</p>
   
-        </details>&nbsp;<h2>Хронология становления веба</h2>
-          <p class="news"><span class="date">25.12.1990 - </span>Первый в мире браузер</p>
-          <p class="news"><span class="date">06.08.1991 - </span>Первый в мире сайт</p>
-          <p class="news"><span class="date">01.10.1994 - </span>World Wide Web Consortium (W3C)</p>
-          <p class="news"><span class="date">17.10.1994 - </span>Perl 5</p>
-          <p class="news"><span class="date">Начало 1995 года - </span>Apache HTTP Server</p>
-          <p class="news"><span class="date">23.05.1995 - </span>MySQL</p>
-          <p class="news"><span class="date">08.06.1995 - </span>Personal Home Page (PHP 1.0)</p>
-          <p class="news"><span class="date">17.12.1996 - </span>Cascading Style Sheets (CSS1)</p>
-    </main>
-  </div> 
+        
+          <p class="news" onmouseover="this.className='task91'" onmouseout="this.className='news'">06.08.1991 - Первый в мире сайт</p>
+          <p class="news" onmouseover="editText" onmouseout="this.className='news'">Больша́я па́нда, или бамбу́ковый медве́дь (лат. Ailuropoda melanoleuca) — вид всеядных млекопитающих из семейства медвежьих (Ursidae) со своеобразной чёрно-белой окраской шерсти, обладающих некоторыми признаками енотов.</p>
+
+</div>
+
+<!-- 
+  <div style="position: absolute; top:20; left:30; width: 20; height: 150;background: lime;">
+    Это слой с текстом на зеленом фоне, помещенным в прямоугольную область 150 х 150 (основной).</div>
+  <div style="position: absolute;top:100;left: 30; z-index: 0;"></div> -->
+
+
+
+<div class="menu">
+  <form name="f0">
+    <input type="button" value="Window"  name="b0">
+  </form>
+  <form name="f1">
+  <input type="button" value="Navigator" onclick="printDataBrowserWrite();" name="b1">
+  </form>
+  <form name="f2">
+    <input type="button" value="Location" onclick="printUsernameAddressDoc();" name="b2">
+  </form>
+  <form name="f4">
+    <input type="button" value="Screen" onclick="printScreenData();" name="b3">
+  </form>
+</div>
+<div style="position: absolute; top: 35%;left: 5%;z-index:0;">
+  <img src="Pand.png" name="pic1" >
+</div>
+
+<div style="position: absolute; top: 35%;left: 15%;z-index:1;">
+  <img src="Pand.png" name="pic2" >
+</div>
+<div style="position: absolute; top: 35%;left: 25%;z-index:0;">
+  <img src="Pand.png" name="pic3" >
+</div>
+
+  
+  <form style="position: absolute; top: 60%;left: 5%;" name="fb1">
+    <input type="button"  value="HideCentrePic" onclick="hidePic13()" name="butt1">
+  </form>
+  <form  style="position: absolute; top: 60%;left: 15%" name="fb2">
+    <input type="button"  value="ShowCentrePic" onclick="showPic13()" name="butt2">
+  </form>
+  <form  style="position: absolute; top: 60%;left: 25%;" onclick="swapZIndex(pic1, pic2)" name="fb3">
+    <input type="button"  value="WhatIsIt?" name="butt3">
+  </form>
+
+<div class="container">
+    <table>
+      <tr>
+        <th>Заголовок 1</th>
+        <th>Заголовок 2</th>
+      </tr>
+      <tr>
+        <td class="highlight-cell">Ячейка 1</td>
+        <td class="highlight-cell">Ячейка 2</td>
+      </tr>
+      <tr>
+        <td class="highlight-cell">Ячейка 3</td>
+        <td class="highlight-cell">Ячейка 4</td>
+      </tr>
+    </table>
+</div>
+
 </body>
 </html>

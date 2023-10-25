@@ -17,7 +17,7 @@ body {
 }
 
 /* Шрифт для "шапки", меню навигации, заголовков второго уровня в основном тексте, новостей, дат и "подвала" */
-.header, .menu, .text h1, .text h2, .text p.news, footer {
+.header, .menu, .text h1, .text h2, .text p.news, footer, p.task91 {
   font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -127,10 +127,56 @@ color: #993333;
 .text p.news {
   text-align: left;
   font-size: 95%;
+  font-weight: 300;
+  color: #000;
   text-indent: 0pt;
   margin-top: .3em;
   margin-bottom: .3em;
 } 
+.newNews{
+  text-align: left;
+  font-size: 95%;
+  font-weight: 300;
+  color: #f00;
+  text-indent: 2pt;
+  margin-top: .3em;
+  margin-bottom: .3em;
+}
+p.task91{
+  
+  font-weight: bold;
+  color:#f00;
+  text-indent: 0px;
+}
+.container {
+  /* display: flex; */
+  justify-content: center;
+}
+.button {
+
+  flex-direction: row;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.highlight-cell:hover {
+  background-color: yellow;
+  font-weight: bold;
+}
 /* Класс, позволяющий выделять полужирным начертанием дат новостей и хронологий */
 .date {
   font-weight: bold;
